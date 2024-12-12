@@ -1,0 +1,95 @@
+/* Configuración general del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fondo azul oscuro extraído de la imagen */
+    color: #ffffff; /* Color de texto predeterminado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    text-align: center;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Alinea elementos verticalmente */
+    align-items: center; /* Centra elementos horizontalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 20px;
+    background-color: #0f0f1f; /* Misma tonalidad que el fondo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Imagen de fondo */
+/* Ajustar la posición del texto */
+/* Ajustar la posición del texto para todo tipo de pantalla */
+/* Ajustar la posición del texto para todo tipo de pantalla */
+.overlay {
+    background: url('cr777.jpg') no-repeat center center; /* Imagen de fondo */
+    background-size: contain; /* Ajustar para no distorsionar */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Asegura que el contenido inicie desde la parte superior */
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 20vh; /* Baja el texto y el botón */
+}
+
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    .overlay {
+        padding-top: 25vh; /* Baja aún más el texto en pantallas pequeñas */
+        background-size: cover; /* Ajusta mejor la imagen de fondo */
+    }
+
+    .overlay h1 {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+
+    .overlay p {
+        font-size: 1rem; /* Ajusta el tamaño del párrafo */
+    }
+
+    .main-button {
+        font-size: 0.9rem; /* Reduce el tamaño del botón */
+        padding: 8px 16px;
+    }
+}
+
+
+
+/* Título */
+.main-container h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Párrafo */
+.main-container p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Botón */
+.main-button {
+    background-color: #007aff; /* Fondo azul Apple */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #555555;
+    transform: translateY(-2px);
+}

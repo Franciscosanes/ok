@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebración de Graduación</title>
+    <link rel="stylesheet" href="main-styles.css">
+</head>
+<body>
+    <!-- Botón para reproducir la canción -->
+    <div class="play-button-container">
+        <button class="play-button animated-button" onclick="PlayAudio()">Reproducir música</button>
+    </div>
+    <div class="overlay">
+        <br><br><br><br><br><br><br>
+        <h2>21.12.2024</h2>
+        <h1>Francisco Sánchez
+            <br> Estrada
+        </h1>
+        <blockquote>
+            <div class="bar"></div>
+            "Nunca escuches a la gente negativa, <br>
+            vive para probar que están equivocados."
+        </blockquote>
+            <br><br><br><br>
+            <p class="scroll-text">Desliza para ver la invitación completa <br>|<br>V</p>
+            
+    </div>
+    <section class="central-section">
+  <!-- Recuadro para la cuenta regresiva -->
+  <div class="countdown-container hidden">
+    <h2>Falta</h2>
+    <div class="countdown">
+        <div>
+            <span id="days">0</span>
+            <p>Días</p>
+        </div>
+        <div>
+            <span id="hours">0</span>
+            <p>Hs</p>
+        </div>
+        <div>
+            <span id="minutes">0</span>
+            <p>Min</p>
+        </div>
+        <div>
+            <span id="seconds">0</span>
+            <p>Seg</p>
+        </div>
+    </div>
+</div>
+
+   <!-- Recuadro de la ceremonia -->
+   <div class="ceremony-container">
+    <h2>Celebración</h2>
+    <hr>
+    <div class="ceremony-info">
+        <h3>Día</h3>
+        <p>Sábado 21 de Diciembre – 16hs</p>
+        <br>
+    </div>
+    <div class="ceremony-info">
+        <h3>Lugar</h3>
+        <p>Casa de mis padres</p>
+        <button class="ceremony-button" onclick="toggleConfirmation()">Confirmar asistencia</button>
+    </div>
+    <div class="ceremony-info">
+        <h3>Dirección</h3>
+        <p>Cda. Francisco Sarabia #14 – Tetepango Hgo.</p>
+        <button class="ceremony-button" onclick="redirectToLocation()">¿Cómo llegar?</button>
+    </div>    
+
+    <!-- Apartado para confirmar asistencia -->
+    <div class="confirmation-container" id="confirmation">
+        <h3>¿Asistes a la fiesta?</h3>
+        <div class="options">
+            <label>
+                <input type="radio" name="attendance" value="Sí, confirmo!">
+                ¡Sí, confirmo!
+            </label>
+            <label>
+                <input type="radio" name="attendance" value="No puedo 😢">
+                No puedo 😢
+            </label>
+        </div>
+        <input type="text" id="attendance-name" placeholder="Ingrese su nombre completo" class="input-field">
+        <button class="confirmation-button" onclick="sendAttendanceWhatsAppMessage()">E n v i a r</button>
+    </div>
+    
+</div>
+
+<section class="image-gallery-container">
+    <h2>Retratos de mi graduación</h2>
+    <p>Un minuto, un segundo, un instante que queda en la eternidad</p>
+    <div class="image-gallery">
+        <div class="image-wrapper">
+            <img src="image/imagen1.jpeg" alt="Retrato 1" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper">
+            <img src="image/imagen2.jpeg" alt="Retrato 2" onclick="enlargeImage(this)">
+        </div>
+        <!-- Imágenes adicionales -->
+        <div class="image-wrapper hidden">
+            <img src="image/imagen3.jpeg" alt="Retrato 3" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen4.jpeg" alt="Retrato 4" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen5.jpeg" alt="Retrato 5" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen6.jpeg" alt="Retrato 6" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen7.jpeg" alt="Retrato 7" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen8.jpeg" alt="Retrato 8" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen9.jpeg" alt="Retrato 9" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen10.jpeg" alt="Retrato 10" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen11.jpeg" alt="Retrato 11" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen12.jpeg" alt="Retrato 12" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen13.jpeg" alt="Retrato 13" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen14.jpeg" alt="Retrato 14" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen15.jpeg" alt="Retrato 15" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen16.jpeg" alt="Retrato 16" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen17.jpeg" alt="Retrato 17" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen18.jpeg" alt="Retrato 18" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen19.jpeg" alt="Retrato 19" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen20.jpeg" alt="Retrato 20" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen21.jpeg" alt="Retrato 21" onclick="enlargeImage(this)">
+        </div>
+        <div class="image-wrapper hidden">
+            <img src="image/imagen22.jpeg" alt="Retrato 22" onclick="enlargeImage(this)">
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <br><br>
+        <button class="btn view-images" onclick="showImages()">Ver más</button>
+        <button class="btn hide-images" onclick="hideImages()">Ocultar</button>
+    </div>
+    <div id="image-modal" class="hidden">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Imagen ampliada">
+    </div>
+    
+</section>
+
+<section class="custom-container">
+    <h2 class="custom-title">Música</h2>
+    <img src="image/junior.png" alt="Decorative Image" class="custom-image">
+    <p class="custom-description">¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
+    <button class="custom-button" onclick="toggleSongForm()">Sugerir canción</button>
+
+    <!-- Nuevo contenedor para el formulario -->
+<div id="new-song-form" class="song-form hidden">
+    <h3>¿Qué canción sugieres?</h3>
+    <div class="options">
+        <label>
+            <input type="text" id="name" placeholder="Tu nombre" class="input-field">
+        </label>
+        <label>
+            <input type="text" id="song-name" placeholder="Nombre de canción y autor" class="input-field">
+        </label>
+    </div>
+    <button class="confirmation-button" onclick="sendWhatsAppMessage()">E n v i a r</button>
+</div>
+</section>
+    </section>
+<section class="final-section">
+    <div class="final-message">
+        <h2>Francisco Sánchez Estrada</h2>
+        <p>¡Te espero!</p>
+    </div>
+</section>
+
+
+   <audio id="musica1" autoplay loop>
+       <source src="audio/cancionh.mp3" type="audio/mpeg">
+       Tu navegador no soporta reproducción de audio.
+   </audio>
+   <script src="script.js"></script>
+</body>
+</html>
